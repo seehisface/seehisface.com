@@ -10,7 +10,6 @@ body {
   flex-flow: column;
   height: 100vh;
 }
-
 .container[role=main] {
   margin-bottom:50px;
   flex: 1 0 auto;
@@ -83,6 +82,7 @@ div.panel-body a.list-group-item {
   font-weight: 800;
   border-radius: 0;
   border: none;
+  font-size: 16px;
 }
 div.panel-group .panel {
     border-radius: 0;
@@ -154,10 +154,6 @@ img {
   color: #404040;
 }
 
-.navbar-brand {
-font-size:bigger;
-}
-
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
@@ -199,10 +195,11 @@ font-size:bigger;
 
 .navbar-custom .avatar-container {
   opacity: 1;
+  visibility: visible;
   position: absolute;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
   left: 50%;
   width: 50px;
   margin-top: -25px;
@@ -224,22 +221,12 @@ font-size:bigger;
 
 .navbar-custom.top-nav-short .avatar-container{
   opacity: 0;
+  visibility: hidden;
 }
 
 .navbar-custom.top-nav-expanded .avatar-container  {
   display: none;
 }
-@media only screen and (max-width: 1300px) {
-  .navbar-custom .avatar-container {
-      visibility: hidden;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .navbar-custom .avatar-container {
-      visibility: visible;
-  }
-}
-  
 
 @media only screen and (min-width: 768px) {
   .navbar-custom .avatar-container {
@@ -315,7 +302,7 @@ footer {
   background: #F5F5F5;
   border-top: 1px #EAEAEA solid;
   margin-top: auto;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 footer a {
@@ -334,7 +321,6 @@ footer .copyright {
 footer .theme-by {
   text-align: center;
   margin: 10px 0 0;
-  font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -387,14 +373,19 @@ footer .theme-by {
   margin-bottom: 10px;
 }
 .post-preview .post-meta,
-.post-heading .post-meta {
+.post-heading .post-meta,
+.page-meta {
   color: #808080;
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
 }
+.page-meta {
+  align-self: center;
+}
 .post-preview .post-meta a,
-.post-heading .post-meta a {
+.post-heading .post-meta a,
+.page-meta a {
   color: #404040;
   text-decoration: none;
 }
@@ -518,7 +509,8 @@ footer .theme-by {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading,
-.intro-header .tags-heading {
+.intro-header .tags-heading,
+.intro-header .categories-heading {
   text-align: center;
 }
 .intro-header.big-img .page-heading,
@@ -528,7 +520,8 @@ footer .theme-by {
   text-shadow: 1px 1px 3px #000;
 }
 .intro-header .page-heading h1,
-.intro-header .tags-heading h1 {
+.intro-header .tags-heading h1,
+.intro-header .categories-heading h1 {
   margin-top: 0;
   font-size: 50px;
 }
@@ -583,7 +576,8 @@ footer .theme-by {
     padding: 150px 0;
   }
   .intro-header .page-heading h1,
-  .intro-header .tags-heading h1 {
+  .intro-header .tags-heading h1,
+  .intro-header .categories-heading h1 {
     font-size: 80px;
   }
   .intro-header .post-heading h1 {
@@ -742,20 +736,82 @@ div.splitbox {width:100%; overflow:auto;}
 
 div.splitbox div.left {
                width:48%;
-               display:inline-block;
                float:left;}
 div.splitbox div.right {
                width:48%;
-               display:inline-block;
                float:right;}
 
 @media only screen and (max-width: 600px) {
 div.splitbox div.left {
                width:100%;
-               display:inline-block;
                float:left;}
 div.splitbox div.right {
                width:100%;
-               display:inline-block;
                float:left;}
+}
+
+/* Delayed Disqus */
+.disqus-comments button {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 10px 5px;
+  background: #FFF;
+  border-radius: 0;
+  color: #404040;
+}
+@media only screen and (min-width: 768px) {
+  .disqus-comments button {
+    padding: 15px 25px;
+  }
+}
+.disqus-comments button:hover, 
+.disqus-comments button:focus {
+  color: #FFF;
+  background: #0085a1;
+  border: 1px solid #0085a1;
+}
+
+/* Related posts */
+h4.see-also {
+  margin-top: 20px;
+}
+
+/* Sharing */
+ ul.share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ ul.share li {
+  display: inline-flex;
+  margin-right: 5px;
+}
+ ul.share li:last-of-type {
+  margin-right: 0;
+}
+ ul.share li .fab {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+  color: #fff;
+}
+ ul.share li a {
+  background-color: #b5c6ce;
+  display: block;
+  border-radius: 50%;
+  text-decoration: none !important;
+  margin: 0;
+}
+ ul.share li:hover .fab {
+  transform: scale(1.4)
 }
