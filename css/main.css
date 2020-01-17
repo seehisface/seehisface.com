@@ -378,7 +378,7 @@ hr.small {
     text-transform:small-caps;
 }
 .topnav {
-    background-color: #333;
+    background-color: #155;
     width:100%;
     position:fixed;
     z-index:1090;
@@ -433,11 +433,13 @@ hr.small {
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
+    top:48px;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border: 1px solid #388;
 }
 
 /* Style the links inside the dropdown */
@@ -452,7 +454,7 @@ hr.small {
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: #388;
     color: white;
 }
 
@@ -469,7 +471,6 @@ hr.small {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-    .navlinks{padding-top:40px;}
     .navlinks a, .dropdown .dropbtn {
         display: none;
     }
@@ -493,7 +494,10 @@ hr.small {
         text-align: left;
     }
     .topnav.responsive .dropdown {float: none;}
-    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown-content {
+        position: relative;
+        top:0;
+    }
     .topnav.responsive .dropdown .dropbtn {
         display: block;
         width: 100%;
@@ -503,15 +507,14 @@ hr.small {
 } 
 /* --- Footer --- */
 footer {
-    background: #F5F5F5;
+    background: #155;
     border-top: 1px #EAEAEA solid;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
-    padding-top:5px;
-    margin-bottom: 10px;
+    color: #f2f2f2;
 }
 footer a {
-    color: #404040;
+    color: #f2f2f2;
 }
 /* --- Post preview --- */
 .post-preview {
