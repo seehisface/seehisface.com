@@ -375,6 +375,7 @@ hr.small {
 /* Add a black background color to the top navigation */
 .site-title {
     float:left;
+    text-transform:small-caps;
 }
 .topnav {
     background-color: #333;
@@ -382,13 +383,13 @@ hr.small {
     position:fixed;
     z-index:1090;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition:0.3s;
 }
 .navclass {
     position:fixed;
 }
 .navlinks {
     float:right;;
-    text-transform:uppercase;
     font-size:12px;
 }
 /* Style the links inside the navigation bar */
@@ -427,7 +428,6 @@ hr.small {
     padding: 14px 16px;
     background-color: inherit;
     margin: 0;
-    text-transform:uppercase;
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -469,7 +469,8 @@ hr.small {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child), .dropdown .dropbtn {
+    .navlinks{padding-top:40px;}
+    .navlinks a, .dropdown .dropbtn {
         display: none;
     }
     .topnav a.icon {
@@ -498,6 +499,7 @@ hr.small {
         width: 100%;
         text-align: left;
     }
+    .topnav.responsive .navlinks {float: none;}
 } 
 /* --- Footer --- */
 footer {
