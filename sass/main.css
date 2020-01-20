@@ -124,6 +124,7 @@ h4.see-also {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
+  margin-top: 20px;
   background-color: #A3B5D1;
   border: 1px solid #52658f;
   border-radius: 4px;
@@ -133,7 +134,6 @@ h4.see-also {
 .topnav {
   background-color: #333a56;
   width: 100%;
-  position: fixed;
   z-index: 1090;
   transition: 0.3s;
   font-size: 18px; }
