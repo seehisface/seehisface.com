@@ -126,6 +126,7 @@ h4.see-also {
 
 /* ---NavBar--- */
 .topnav {
+  position: fixed;
   background-color: #333a56;
   width: 100%;
   z-index: 1090;
@@ -306,6 +307,7 @@ footer {
 
 /* --- Post and page headers --- */
 .header-container-img {
+  margin-top: 62px;
   background: no-repeat center center;
   background-size: cover;
   height: 400px; }
