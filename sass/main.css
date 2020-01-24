@@ -1,13 +1,14 @@
 body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #404040;
   position: relative;
   background: #fff;
   display: flex;
   flex-flow: column;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #e9e9e9; }
 
 article,
 footer,
@@ -17,7 +18,7 @@ nav {
 
 a {
   text-decoration: none;
-  color: #333a56;
+  color: #ffffff;
   background-color: transparent; }
   a:active, a:hover {
     outline: 0; }
@@ -26,6 +27,9 @@ a {
 
 h1 {
   font-size: 2em; }
+
+h4 {
+  font-size: 1em; }
 
 h1,
 h2,
@@ -44,9 +48,9 @@ hr {
   border-top: 1px solid #eee; }
 
 hr.small {
-  max-width: 100px;
+  max-width: 150px;
   margin: 15px auto;
-  border-width: 4px;
+  border-width: 3px;
   border-color: inherit;
   border-radius: 3px; }
 
@@ -136,12 +140,12 @@ h4.see-also {
   position: fixed;
   z-index: 1090;
   transition: 0.3s;
-  font-size: 18px; }
+  font-size: 14px; }
 
 .navtitle img {
   float: left;
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   margin-right: 10px; }
 
 .navlinks {
@@ -153,7 +157,7 @@ h4.see-also {
   display: block;
   color: #f7f5e6;
   text-align: center;
-  padding: 14px 8px;
+  padding: 16px 12px;
   text-decoration: none;
   border-left: 0.5px solid #52658f; }
 
@@ -183,7 +187,7 @@ h4.see-also {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border: 1px solid #333a56; }
+  border: 1px solid #444444; }
   .dropdown-content a {
     background-color: #494e6b;
     float: none;
@@ -205,9 +209,6 @@ h4.see-also {
 .dropdown:hover .dropdown-content {
   display: block; }
 
-/* ---Responsive Nav--- */
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .navlinks a,
   .dropdown .dropbtn {
@@ -243,16 +244,15 @@ h4.see-also {
 footer {
   background: #333a56;
   border-top: 1px #eaeaea solid;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
-  color: #f7f5e6; }
-  footer a {
-    color: #f7f5e6; }
+  color: #f7f5e6;
+  padding: 4px; }
 
 /* --- Post preview --- */
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 0px solid #eee; }
 
 @media only screen and (min-width: 768px) {
   .post-preview {
@@ -298,10 +298,6 @@ footer {
   width: 100%;
   margin-top: 10px; }
 
-@media only screen and (min-width: 768px) {
-  .post-preview .post-title {
-    font-size: 28px; } }
-
 /* --- Tags --- */
 .blog-tags {
   color: #A3B5D1;
@@ -321,91 +317,31 @@ footer {
       background-color: #ccc; }
 
 /* --- Post and page headers --- */
-.intro-header {
-  margin: 80px 0 20px;
-  position: relative; }
-  .intro-header.big-img {
-    background: no-repeat center center;
-    background-size: cover;
-    margin-top: 51px;
-    /* The small navbar is 50px tall + 1px border */
-    margin-bottom: 35px; }
-  .intro-header .page-heading {
-    text-align: center; }
-  .intro-header.big-img .post-heading {
-    padding: 100px 0;
-    color: #fff;
-    text-shadow: 1px 1px 3px #000; }
-  .intro-header .page-heading h1 {
-    margin-top: 0;
-    font-size: 50px; }
-  .intro-header .post-heading h1 {
-    margin-top: 0;
-    font-size: 35px; }
-  .intro-header .page-heading .page-subheading {
-    font-size: 22px;
-    line-height: 1.1;
+.header-container-img {
+  position: relative;
+  background: no-repeat center center;
+  background-size: cover;
+  height: 400px; }
+  .header-container-img .header-blurb {
+    color: #f2f2f2;
+    text-shadow: -1px 0 10px black, 0 1px 10px black, 1px 0 10px  black, 0 -1px 10px black; }
+  .header-container-img img {
     display: block;
-    font-weight: 300;
-    margin: 10px 0 0; }
-  .intro-header .post-heading .post-subheading {
-    font-size: 22px;
-    line-height: 1.1;
-    display: block;
-    font-weight: 300;
-    margin: 10px 0 0;
-    margin-bottom: 20px; }
-  .intro-header.big-img .post-heading .post-subheading {
-    font-weight: 400; }
-  .intro-header.big-img .post-heading .post-meta {
-    color: #eee; }
-  .intro-header.big-img .img-desc {
-    background: rgba(30, 30, 30, 0.6);
-    position: absolute;
-    padding: 5px 10px;
-    font-size: 11px;
-    color: #eee;
-    right: 0;
-    bottom: 0;
-    display: none; }
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    object-fit: cover; }
 
-@media only screen and (min-width: 768px) {
-  .intro-header {
-    margin-top: 130px; }
-    .intro-header.big-img {
-      margin-top: 91px;
-      /* Full navbar is small navbar + 20px padding on each side when expanded */ }
-      .intro-header.big-img .post-heading {
-        padding: 150px 0; }
-    .intro-header .page-heading h1 {
-      font-size: 60px; }
-    .intro-header .post-heading h1 {
-      font-size: 40px; }
-    .intro-header.big-img .img-desc {
-      font-size: 12px; } }
+.header-blurb {
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-.header-section.has-img .no-img {
-  margin-top: 0;
-  background: #fcfcfc;
-  margin: 0 0 40px;
-  padding: 20px 0;
-  box-shadow: 0 0 5px #aaa; }
-
-.header-section.has-img .intro-header.no-img {
-  display: none; }
-
-/* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
-@media only screen and (max-width: 365px) {
-  .header-section.has-img .intro-header.no-img {
-    display: block; }
-  .intro-header.big-img {
-    width: 100%;
-    height: 220px; }
-    .intro-header.big-img .post-heading {
-      display: none; }
-  .header-section.has-img .big-img {
-    margin-bottom: 0; } }
-
-@media only screen and (max-width: 325px) {
-  .intro-header.big-img {
-    height: 200px; } }
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px; }
+  .header-container-img {
+    height: 300px; } }
