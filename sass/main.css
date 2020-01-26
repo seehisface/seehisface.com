@@ -61,8 +61,8 @@ p {
   margin: 5px 0; }
 
 .container {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
   margin-right: auto;
   margin-left: auto;
   max-width: 720px;
@@ -88,8 +88,6 @@ h4.see-also {
   margin: 20px 0;
   text-align: center;
   list-style: none; }
-  .pager.blog-pager {
-    margin-top: 10px; }
   .pager li {
     display: inline; }
     .pager li > a {
@@ -113,17 +111,18 @@ h4.see-also {
     float: left; }
   .pager .previous > a,
   .pager .next > a {
-    background-color: #fbffc0;
-    color: #be9b7b; }
+    background-color: #4b3832;
+    color: #fbffc0; }
 
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
+.intro {
+  min-height: 30px;
+  padding: 30px;
+  margin-bottom: 10px;
   background-color: #4b3832;
   border: 1px solid #fbffc0;
   border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+  color: #be9b7b; }
 
 /* ---NavBar--- */
 .topnav {
@@ -254,6 +253,8 @@ footer {
   text-align: center;
   color: #fffbe5;
   padding: 4px; }
+  footer a {
+    color: #fffbe5; }
 
 /* --- Post preview --- */
 .post-preview {
@@ -323,6 +324,7 @@ footer {
 
 /* --- Post and page headers --- */
 .header-container-img {
+  position: relative;
   margin-top: 62px;
   background: no-repeat center center;
   background-size: cover;
@@ -334,13 +336,14 @@ footer {
 
 .header-blurb {
   text-align: center;
-  margin: auto;
-  padding: 70px 0; }
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px; }
   .header-container-img {
-    min-height: 150px; }
-  .header-blurb {
-    padding: 46px 0; } }
+    min-height: 150px; } }
