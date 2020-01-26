@@ -5,13 +5,12 @@ body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #404040;
+  color: #6b3e26;
   position: relative;
-  background: #fff;
   display: flex;
   flex-flow: column;
   height: 100vh;
-  background-color: #e9e9e9;
+  background-color: #fffbe5;
   min-width: 300px; }
 
 article,
@@ -22,12 +21,12 @@ nav {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #6b3e26;
   background-color: transparent; }
   a:active, a:hover {
     outline: 0; }
   a:hover, a:focus {
-    color: #0085a1; }
+    color: #be9b7b; }
 
 h1 {
   font-size: 3em; }
@@ -48,7 +47,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee; }
+  border-top: 1px solid #be9b7b; }
 
 hr.small {
   max-width: 150px;
@@ -96,73 +95,88 @@ h4.see-also {
     .pager li > a {
       display: inline-block;
       padding: 10px 14px;
-      border: 1px solid #ddd;
+      border: 1px solid #be9b7b;
       border-radius: 15px;
       margin-bottom: 20px;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 700;
       border-radius: 4px;
-      border: 1px solid #e3e3e3;
-      color: #f7f5e6; }
+      border: 1px solid #be9b7b;
+      color: #be9b7b; }
       .pager li > a:focus, .pager li > a:hover {
         text-decoration: none;
-        background-color: #eee;
-        background: #494e6b; }
+        background-color: primary_4; }
   .pager .next > a {
     float: right; }
   .pager .previous > a {
     float: left; }
   .pager .previous > a,
   .pager .next > a {
-    background: #52658f;
-    color: #f7f5e6; }
+    background-color: #fbffc0;
+    color: #be9b7b; }
 
 .well {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #A3B5D1;
-  border: 1px solid #52658f;
+  background-color: #4b3832;
+  border: 1px solid #fbffc0;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
 
 /* ---NavBar--- */
 .topnav {
   position: fixed;
-  background-color: #333a56;
+  background-color: #4b3832;
   width: 100%;
   z-index: 1090;
   transition: 0.3s;
   font-size: 14px; }
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #fffbe5;
+  text-align: center;
+  padding: 16px 12px;
+  text-decoration: none;
+  border-left: 0.5px solid #be9b7b;
+  line-height: 30px; }
+
 .navtitle {
   float: left; }
+  .navtitle a {
+    border-left: 0px;
+    font-size: 50px; }
   .navtitle img {
     float: left;
     width: 30px;
     height: 30px;
     margin-right: 4px;
     vertical-align: baseline; }
+    .navtitle img ynavtitle {
+      float: left; }
+      .navtitle img ynavtitle a {
+        border-left: 0px;
+        font-size: 50px; }
+      .navtitle img ynavtitle img {
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin-right: 4px;
+        vertical-align: baseline; }
+    .navtitle img .navlinks {
+      float: right; }
 
 .navlinks {
   float: right; }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f7f5e6;
-  text-align: center;
-  padding: 16px 12px;
-  text-decoration: none;
-  border-left: 0.5px solid #464d69;
-  line-height: 30px; }
-
 /* Add an active class to highlight the current page */
 .active {
-  background-color: #e8e8e8;
-  color: #A3B5D1; }
+  background-color: #fffbe5;
+  color: #fffbe5; }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -180,12 +194,13 @@ h4.see-also {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border: 1px solid #444444;
+  border: 1px solid #be9b7b;
   border-top: 0; }
   .dropdown-content a {
-    background-color: #52658f;
+    margin-left: -1px;
+    background-color: #fffbe5;
     float: none;
-    color: #f7f5e6;
+    color: #be9b7b;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -193,11 +208,10 @@ h4.see-also {
 
 .topnav a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #52658f;
-  color: #f7f5e6; }
+  background-color: #be9b7b; }
 
 .dropdown-content a:hover {
-  background-color: #e8e8e8;
+  background-color: #fffbe5;
   color: black; }
 
 .dropdown:hover .dropdown-content {
@@ -234,17 +248,17 @@ h4.see-also {
 
 /* --- Footer --- */
 footer {
-  background: #333a56;
-  border-top: 1px #eaeaea solid;
+  background: #4b3832;
+  border-top: 1px #be9b7b solid;
   font-size: 10px;
   text-align: center;
-  color: #f7f5e6;
+  color: #fffbe5;
   padding: 4px; }
 
 /* --- Post preview --- */
 .post-preview {
   padding: 20px 0;
-  border-bottom: 0px solid #eee; }
+  border-bottom: 0px solid #be9b7b; }
 
 @media only screen and (min-width: 768px) {
   .post-preview {
@@ -257,30 +271,29 @@ footer {
   border-bottom: 0; }
 
 .post-preview a {
-  text-decoration: none;
-  color: #404040; }
+  text-decoration: none; }
   .post-preview a:focus, .post-preview a:hover {
     text-decoration: none;
-    color: #0085a1; }
+    color: #be9b7b; }
 
 .post-preview .post-title {
   font-size: 24px;
   margin-top: 0; }
 
 .post-preview .post-meta {
-  color: #808080;
+  color: #be9b7b;
   font-size: 14px;
   font-style: italic;
   margin: 0 0 10px; }
 
 .post-heading .post-meta {
-  color: #808080;
+  color: #be9b7b;
   font-size: 14px;
   font-style: italic;
   margin: 0 0 10px; }
 
 .page-meta {
-  color: #808080;
+  color: #be9b7b;
   font-size: 14px;
   font-style: italic;
   margin: 0 0 10px;
@@ -292,41 +305,42 @@ footer {
 
 /* --- Tags --- */
 .blog-tags {
-  color: #A3B5D1;
+  color: #fffbe5;
   font-size: 15px;
   margin-bottom: 30px; }
   .blog-tags:before {
     content: "Tags: "; }
   .blog-tags a {
-    color: #A3B5D1;
+    color: #be9b7b;
     text-decoration: none;
     padding: 0px 5px; }
     .blog-tags a:before {
       content: "#"; }
     .blog-tags a:hover {
       border-radius: 2px;
-      color: #008aff;
-      background-color: #ccc; }
+      color: primary_3;
+      background-color: #be9b7b; }
 
 /* --- Post and page headers --- */
 .header-container-img {
   margin-top: 62px;
   background: no-repeat center center;
   background-size: cover;
-  height: 400px; }
+  min-height: 300px;
+  border-top: 2px solid #fbffc0; }
   .header-container-img .header-blurb {
-    color: #f2f2f2;
+    color: #fbffc0;
     text-shadow: -1px 0 10px black, 0 1px 10px black, 1px 0 10px  black, 0 -1px 10px black; }
 
 .header-blurb {
   text-align: center;
   margin: auto;
-  padding: 100px 0; }
+  padding: 70px 0; }
 
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px; }
   .header-container-img {
-    height: 200px; }
+    min-height: 150px; }
   .header-blurb {
-    padding: 40px 0; } }
+    padding: 46px 0; } }
