@@ -124,7 +124,8 @@ h4.see-also {
   width: 100%;
   z-index: 1090;
   transition: 0.3s;
-  font-size: 14px; }
+  font-size: 14px;
+  border-bottom: 4px solid #6b3e26; }
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -148,12 +149,12 @@ h4.see-also {
     height: 30px;
     margin-right: 4px;
     vertical-align: baseline; }
-    .navtitle img ynavtitle {
+    .navtitle img navtitle {
       float: left; }
-      .navtitle img ynavtitle a {
+      .navtitle img navtitle a {
         border-left: 0px;
         font-size: 50px; }
-      .navtitle img ynavtitle img {
+      .navtitle img navtitle img {
         float: left;
         width: 30px;
         height: 30px;
@@ -209,7 +210,7 @@ h4.see-also {
 .dropdown:hover .dropdown-content {
   display: block; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   .navlinks a,
   .dropdown .dropbtn {
     display: none; }
@@ -217,7 +218,7 @@ h4.see-also {
     float: right;
     display: block; } }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
   .topnav.responsive a {
     float: none;
     display: block;
@@ -253,7 +254,8 @@ footer {
 /* --- Post and page headers --- */
 .header-container {
   margin-top: 62px;
-  border-top: 2px solid #fbffc0; }
+  flex: 0 0 auto;
+  padding: 0 10px; }
 
 .header-blurb {
   text-align: center;
@@ -268,7 +270,7 @@ footer {
   .img .header-blurb {
     padding-top: 50px; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   body {
     font-size: 14px; }
   .header-container {
