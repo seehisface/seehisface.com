@@ -97,7 +97,7 @@ h4.see-also {
       color: #be9b7b; }
       .pager li > a:focus, .pager li > a:hover {
         text-decoration: none;
-        background-color: primary_4; }
+        background-color: #fffbe5; }
   .pager .next > a {
     float: right; }
   .pager .previous > a {
