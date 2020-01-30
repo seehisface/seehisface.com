@@ -1,0 +1,4 @@
+function navtoggle(){var x=document.getElementById("topnav");if(x.className==="topnav"){x.className+=" responsive";}else{x.className="topnav";}}
+var prevScrollpos=window.pageYOffset;window.onscroll=function(){var currentScrollPos=window.pageYOffset;if(prevScrollpos>currentScrollPos){document.getElementById("topnav").style.top="0";}else{if(currentScrollPos>100){document.getElementById("topnav").style.top="-100px";}}
+prevScrollpos=currentScrollPos;}
+WebFontConfig={google:{families:['Roboro+Slab']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();
