@@ -1,0 +1,5 @@
+function navToggle(){var x=document.getElementById("topnav");if(x.className==="topnav"){x.className+=" responsive";}else{x.className="topnav";}}
+document.addEventListener('DOMContentLoaded',function(){document.getElementById('togglenav').addEventListener('click',navToggle);});var prevScrollpos=window.pageYOffset;window.onscroll=function(){var currentScrollPos=window.pageYOffset;if(prevScrollpos>currentScrollPos){document.getElementById("topnav").style.top="0";}else{if(currentScrollPos>100){document.getElementById("topnav").style.top="-100px";}}
+prevScrollpos=currentScrollPos;}
+window.onscroll=function(){var currentScrollPos=window.pageYOffset;if(currentScrollPos>600){document.getElementById("back2Top").style.display="block";}else{document.getElementById("back2Top").style.display="none";}}
+var refTagger={settings:{bibleVersion:"ESV",noSearchClassNames:["no-reftagger"]}};(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src="//api.reftagger.com/v2/RefTagger.js";s.parentNode.insertBefore(g,s);}(document,"script"));
